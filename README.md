@@ -1,7 +1,7 @@
 # capsid_percolation_modeling
  Collection of codes with Monte Carlo simulations for modeling virus shell (capsid) percolation
 
-
+![](https://github.com/tanwarmayank524/capsid_percolation_modeling/blob/main/mygif1.gif)
 
  ## Background
 In this work, we use graph theory to model the stability of capsids. The graph geometry gives the shape of the initial capsid, the nodes the individual subunits of the capsid, and the edges between the nodes the interactions between the subunits.
