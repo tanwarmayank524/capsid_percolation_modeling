@@ -4,6 +4,7 @@
  ## Background
 In this work, we use graph theory to model the stability of capsids. The graph geometry gives the shape of the initial capsid, the nodes the individual subunits of the capsid, and the edges between the nodes the interactions between the subunits.
 The interactions between the subunits are modeled with molecular dynamics simulations, and the corresponding energetics are fed into the Monte Carlo code to simulate the fragmentation.
+
 The Monte Carlo code looks at different aspects of the fragmentation process, including the effect of:
 1. The energy of interaction between subunits
 2. The size and shape of the initial capsid
