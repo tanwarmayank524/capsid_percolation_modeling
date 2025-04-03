@@ -1,5 +1,5 @@
 # capsid_percolation_modeling
- Collection of codes with Monte Carlo simulations for modeling virus shell (capsid) percolation
+ Collection of codes with Monte Carlo simulations for modeling virus shell (capsid) fragmentation
 
 ![](https://github.com/tanwarmayank524/capsid_percolation_modeling/blob/main/mygif1.gif)
 
