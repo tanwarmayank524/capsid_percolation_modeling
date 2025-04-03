@@ -1,13 +1,16 @@
 # capsid_percolation_modeling
- Collection of codes with Monte Carlo simulations for modeling capsid percolation
+ Collection of codes with Monte Carlo simulations for modeling virus shell (capsid) percolation
 
- ## volume fraction distribution
-volume_fraction_distribution gives the amount of volume and the fraction of volume around a reference atom occupied by the rest of the atoms for a periodic ab initio molecular dynamics simulation. This distribution quantifies the local environment by treating atoms as van der Waals spheres and calculating how much volume is occupied by surrounding atoms for a reference atom as a function of distance. The code gives the volume occupied and the fraction relative to the total volume. The script can be run with:
+ ## Background
+In this work, we use graph theory to model the stability of capsids. The graph geometry gives the shape of the initial capsid, the nodes the individual subunits of the capsid, and the edges between the nodes the interactions between the subunits.
+The interactions between the subunits are modeled with molecular dynamics simulations, and the corresponding energetics are fed into the Monte Carlo code to simulate the fragmentation.
+The Monte Carlo code looks at different aspects of the fragmentation process, including the effect of:
+1. The energy of interaction between subunits
+2. The size and shape of the initial capsid
+3. The different modeling approaches to include the surroundings
+4. The effect of surroundings interactions
 
-```python volume_fraction_distribution.py *XDATCAR.xlsx atom1 grid OUTPUT.png```
-
-Here, atom1 is the reference atom for creating the volume fraction distribution, grid is the gridpoint size for generating the distributions, and the OUTPUT file gives volume and volume fraction distributions. *XDATCAR.xlsx is the input file.
-
+This work is currently in progress, and more details will be added soon!
 
 # Authors
 Mayank Tanwar
