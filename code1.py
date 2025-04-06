@@ -1,14 +1,14 @@
 import networkx as nx
-import numpy as np
 import os
 import random
 import math
 import matplotlib.pyplot as plt
 import imageio.v2 as imageio
+import sys
 
 #initializing the graph
-grid_x = 6
-grid_y = 10
+grid_x = int(sys.argv[1])
+grid_y = int(sys.argv[2])
 G = nx.triangular_lattice_graph(m = grid_x, n = grid_y, periodic=True, with_positions=True, create_using=None)
 for (w, x), (y, z) in G.edges:
     if (x == z):
@@ -17,11 +17,11 @@ for (w, x), (y, z) in G.edges:
 #computing probabilities from interaction energies between edges
 R = 8.314 # J/mol
 T = 300 #Kelvin
-E1 = -611.236*1000/(R*T) #g
-E2 = -398.779*1000/(R*T) #y
-E3 = -367.681*1000/(R*T) #r
-E4 = -523.476*1000/(R*T) #b
-E_correction = 0*1000/(R*T)
+E1 = -611.236*1000/(R*T) #green color edge
+E2 = -398.779*1000/(R*T) #yellow color edge
+E3 = -367.681*1000/(R*T) #red color edge
+E4 = -523.476*1000/(R*T) #blue color edge
+E_correction = 0*1000/(R*T) #turned off if not accounting for local changes in node-node interaction
 
 #assigning energies to the edges
 for ((w, x), (y, z)) in G.edges():
@@ -80,7 +80,8 @@ empty_nodes = []
 filenames = []
 
 #run fragmentation
-for i in range(total_nodes*200):
+number_of_runs = int(sys.argv[3])
+for i in range(total_nodes*number_of_runs):
     graph_list_nodes = list(G.nodes)
     graph_list_edges = list(G.edges)
 
@@ -131,8 +132,9 @@ for i in range(total_nodes*200):
             else:
                 empty_nodes += [n]
 
-    #fragmentation threshold    
-    if len(empty_nodes) >= (total_nodes/3):
+    #fragmentation threshold
+    fragmentation_threshold_fraction = int(sys.argv[4])    
+    if len(empty_nodes) >= (total_nodes/fragmentation_threshold_fraction):
         break
 
 with imageio.get_writer('mygif2.gif', mode='I') as writer:
