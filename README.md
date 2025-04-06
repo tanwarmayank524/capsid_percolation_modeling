@@ -13,7 +13,25 @@ The Monte Carlo code looks at different aspects of the fragmentation process, in
 3. The different modeling approaches to include the surroundings
 4. The effect of surroundings interactions
 
-This work is currently in progress, and more details will be added soon!
+
+## code 1
+code1.py gives the evolution of the fragmentation process in the graph for a single run. The script can be run with:
+
+```python code1.py grid_x grid_y number_of_runs fragmentation_threshold_fraction```
+
+Here, grid_x(e.g., 6) and grid_y(e.g., 10) are the number of grid points in the x and y directions in the periodic graph. number_of_runs(e.g., 200) x the number of nodes gives the number of times you want to run the single simulation. 
+fragmentation_threshold_fraction(e.g., 3) gives the termination condition when empty nodes are more than a certain fraction of total nodes.      
+
+
+## code 2
+code2.py gives the average number of remaining graph edges after running a certain number of independent Monte Carlo simulations. The script can be run with:
+
+```python code2.py grid_x grid_y number_of_runs fragmentation_threshold_fraction number_of_simulations```
+
+number_of_simulations(e.g., 100) gives the number of independent Monte Carlo simulations for obtaining the average behavior of the fragmentation process.
+
+
+This work is in progress, and more details will be added soon!
 
 # Authors
 Mayank Tanwar
