@@ -137,7 +137,7 @@ for i in range(total_nodes*number_of_runs):
     if len(empty_nodes) >= (total_nodes/fragmentation_threshold_fraction):
         break
 
-with imageio.get_writer('mygif2.gif', mode='I') as writer:
+with imageio.get_writer('code1.gif', mode='I') as writer:
     for filename in filenames:
         image = imageio.imread(filename)
         writer.append_data(image)
