@@ -19,7 +19,8 @@ code1.py gives the evolution of the fragmentation process in the graph for a sin
 
 ```python code1.py grid_x grid_y number_of_runs fragmentation_threshold_fraction```
 
-Here, grid_x(e.g., 6) and grid_y(e.g., 10) are the number of grid points in the x and y directions in the periodic graph. number_of_runs(e.g., 200) x the number of nodes gives the number of times you want to run the single simulation. 
+Here, grid_x(e.g., 6) and grid_y(e.g., 10) are the number of grid points in the x and y directions in the periodic graph. 
+number_of_runs(e.g., 200) x the number of nodes gives the number of times you want to run the single simulation. 
 fragmentation_threshold_fraction(e.g., 3) gives the termination condition when empty nodes are more than a certain fraction of total nodes.      
 
 
